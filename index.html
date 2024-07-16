@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gacha Calculator</h1>
+        <form id="gachaForm">
+            <div class="form-box">
+                <h2>상품 확률</h2>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <div class="form-group">
+                            <label for="probability">상품이 뜰 확률</label>
+                            <input type="number" id="probability" name="probability" step="0.0001" placeholder="%">
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <div class="form-group">
+                            <label for="cost">가챠 가격</label>
+                            <input type="number" id="cost" name="cost">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <h2>천장 시스템</h2>
+                <div class="form-group">
+                    <label for="ceiling">천장 횟수</label>
+                    <input type="number" id="ceiling" name="ceiling">
+                </div>
+            </div>
+            <div class="form-box">
+                <h2>확률 증가 시스템</h2>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <div class="form-group">
+                            <label for="increasePoint">확률 증가 시점</label>
+                            <input type="number" id="increasePoint" name="increasePoint">
+                        </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <div class="form-group">
+                            <label for="increaseProbability">증가 후의 확률</label>
+                            <input type="number" id="increaseProbability" name="increaseProbability" step="0.0001" placeholder="%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <h2>조각 시스템</h2>
+                <div class="form-group">
+                    <label for="pieceProbability">조각이 뜰 확률 (%)</label>
+                    <input type="number" id="pieceProbability" name="pieceProbability" step="0.0001">
+                </div>
+                <div class="form-group" id="pieceCountGroup" style="display: none;">
+                    <label for="pieceCountMin">주어지는 조각의 최소/최대 개수</label>
+                    <div class="input-group">
+                        <input type="number" id="pieceCountMin" name="pieceCountMin" placeholder="Min">
+                        <input type="number" id="pieceCountMax" name="pieceCountMax" placeholder="Max">
+                    </div>
+                </div>
+                <div class="form-group" id="requiredPiecesGroup" style="display: none;">
+                    <label for="requiredPieces">조합에 필요한 조각의 개수</label>
+                    <input type="number" id="requiredPieces" name="requiredPieces">
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button type="submit" id="calculateButton" disabled>계산</button>
+                <div id="buttonOverlay" class="button-overlay"></div>
+            </div>
+        </form>
+        <div id="results" class="results">
+            <p id="averageTries"></p>
+            <p id="averageCost"></p>
+            <p id="probabilityGettingAtLeastOne"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
