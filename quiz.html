@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GACHA STONE - 가챠 확률 문제</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <h1>GACHA STONE</h1>
+        </div>
+        <div class="nav-buttons">
+            <a href="calculator.html" class="nav-button inactive">가챠 계산기</a>
+            <a href="quiz.html" class="nav-button active">가챠 확률 문제</a>
+        </div>
+    </div>
+    <div class="content">
+        <h1>가챠 확률 문제</h1>
+        <div>
+            <label for="problem-type">문제 유형 선택:</label>
+            <select id="problem-type">
+                <option value="type1">유형 1: m회 시도에서 ★n이 최소 1개 나올 확률</option>
+                <option value="type2">유형 2: m회 시도에서 ★n이 나오지 않을 확률</option>
+                <option value="type3">유형 3: m회 시도에서 ★n이 나올 평균적인 횟수</option>
+            </select>
+        </div>
+        <div class="problem-container">
+            <div id="probability-table"></div>
+            <p id="problem-description"></p>
+        </div>
+        <div>
+            <input type="text" id="answer-input" placeholder="정답 입력">
+            <button id="check-answer-button">확인</button>
+        </div>
+        <div class="result" id="result"></div>
+        <div id="action-buttons">
+            <button id="retry-button" style="display: none;">다시하기</button>
+            <button id="new-problem-button" style="display: none;">새로운 문제</button>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
