@@ -21,12 +21,40 @@
     <div class="content">
         <h1>가챠 확률 문제</h1>
         <div>
-            <label for="problem-type">문제 유형 선택:</label>
-            <select id="problem-type">
-                <option value="type1">유형 1: m회 시도에서 최소 1개의 ★n</option>
-                <option value="type2">유형 2: m회 시도에서 ★n이 나오지 않을 확률</option>
-                <option value="type3">유형 3: m회 시도에서 ★n이 나올 평균적인 횟수를 구하세요.</option>
-            </select>
+            <div class="description">
+                <div><strong>가챠를 주제로 한 확률 관련 문제를 풀 수 있습니다.</strong></div>
+                3 ~ 5개의 상품 종류가 표로 제시되며 그 중 한 종류를 목표로 가챠를 돌린다는 전제로 출제됩니다.<br>
+                해당 상품의 확률을 참고해, 문제에서 요구하는 식을 답으로 제출해야합니다.<br>
+                문제의 종류는 아래의 드롭다운에서 선택할 수 있습니다.<br>
+                <hr>
+                <label for="problem-type">문제 유형 선택:</label>
+                <select id="problem-type">
+                    <option value="type1">유형 1: m회 시도에서 최소 1개의 ★n</option>
+                    <option value="type2">유형 2: m회 시도에서 ★n이 나오지 않을 확률</option>
+                    <option value="type3">유형 3: m회 시도에서 ★n이 나올 평균적인 횟수를 구하세요.</option>
+                </select>
+            </div>
+        </div>
+        <div class="operator-description">
+            <p>문제의 답으로는 식(formula)만을 받습니다. 사용할 수 있는 연산자는 아래와 같습니다:</p>
+            <table>
+                <tr>
+                    <th>연산자</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td>+, -, *, /</td>
+                    <td>덧셈, 뺄셈, 곱셈, 나눗셈</td>
+                </tr>
+                <tr>
+                    <td>^</td>
+                    <td>거듭제곱 (예: 2^3 = 8)</td>
+                </tr>
+                <tr>
+                    <td>%</td>
+                    <td>나머지</td>
+                </tr>
+            </table>
         </div>
         <div class="problem-container">
             <div id="probability-table"></div>
