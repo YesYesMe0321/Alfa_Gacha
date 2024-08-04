@@ -69,6 +69,15 @@ body {
     margin-bottom: 20px;
 }
 
+/* 페이지 설명 */ 
+.description {
+    background-color: #1abc9c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* 문제 제시 */
 .problem-container {
     margin-bottom: 20px;
 }
@@ -91,13 +100,6 @@ table, th, td {
 th, td {
     padding: 8px;
     text-align: left;
-}
-
-.description {
-    background-color: #1abc9c;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
 }
 
 .operator-description {

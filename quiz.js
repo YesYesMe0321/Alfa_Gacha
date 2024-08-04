@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function generateProblem() {
         const problemType = problemTypeSelect.value;
-        const starCount = getRandomInt(3, 5);
+        const starCount = getRandomInt(3, 4);
         const probabilities = generateProbabilities(starCount);
         const markdownTable = generateMarkdownTable(starCount, probabilities);
 
