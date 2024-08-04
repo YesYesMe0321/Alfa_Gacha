@@ -47,21 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
         switch (problemType) {
             case "type1":
-                m = getRandomInt(10, 100);
+                m = getRandomInt(1, 20) * 10;
                 n = getRandomInt(1, starCount);
                 p = probabilities[n - 1];
                 currentAnswer = 1 - Math.pow((1 - p / 100), m);
                 problemText = `가챠를 ${m}회 돌렸을 때 최소 1개의 ★${n}이 나올 확률을 구하는 식을 작성하세요.`;
                 break;
             case "type2":
-                m = getRandomInt(10, 100);
+                m = getRandomInt(1, 20) * 10;
                 n = getRandomInt(1, starCount);
                 p = probabilities[n - 1];
                 currentAnswer = Math.pow((1 - p / 100), m);
                 problemText = `가챠를 ${m}회 돌렸을 때 ★${n}이 한 번도 나오지 않을 확률을 구하는 식을 작성하세요.`;
                 break;
             case "type3":
-                m = getRandomInt(10, 100);
+                m = getRandomInt(1, 20) * 10;
                 n = getRandomInt(1, starCount);
                 p = probabilities[n - 1];
                 currentAnswer = m * (p / 100);
